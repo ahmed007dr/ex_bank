@@ -8,14 +8,18 @@ class bank :
         print(self.blance)
 
     def withdrow(self,amout):
-        self.blance -=amout
-        print(self.blance)
+        if amout < self.blance:
+            self.blance -=amout
+            print(self.blance)
+        else:
+            print('can not')
+
 
 
 c1=bank('ahmed',12)
 c1.deposit(500)
 c1.deposit(1000)
-c1.withdrow(400)
+c1.withdrow(1600)
 
 
 
