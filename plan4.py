@@ -1,7 +1,6 @@
 class user:
     def __init__(self,name,age) -> None:
         print(f'welcome {name}')
-        self.blance=0
         self.name = name
         self.age=age
 
@@ -13,6 +12,10 @@ class user:
 
 
 class bank(user) :
+    def __init__(self, name, age) -> None:
+        super().__init__(name, age)
+        self.blance=0
+
 
     def deposit (self,amount):
         self.blance += amount
