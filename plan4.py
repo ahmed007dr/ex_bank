@@ -7,10 +7,15 @@ class bank :
         self.blance += amount
         print(self.blance)
 
+    def withdrow(self,amout):
+        self.blance -=amout
+        print(self.blance)
+
 
 c1=bank('ahmed',12)
 c1.deposit(500)
 c1.deposit(1000)
+c1.withdrow(400)
 
 
 
