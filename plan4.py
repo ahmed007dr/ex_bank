@@ -1,9 +1,18 @@
-class bank :
+class user:
     def __init__(self,name,age) -> None:
         print(f'welcome {name}')
         self.blance=0
         self.name = name
         self.age=age
+
+
+    def show_Details(self):
+        print(f'Name {self.name}')
+        print(f'age {self.age}')
+        print(f'my blance {self.blance}')
+
+
+class bank(user) :
 
     def deposit (self,amount):
         self.blance += amount
@@ -15,11 +24,6 @@ class bank :
             return
         self.blance -=amout
         print(self.blance)
-
-    def show_Details(self):
-        print(f'Name {self.name}')
-        print(f'age {self.age}')
-        print(f'my blance {self.blance}')
 
 
 c1=bank('ahmed',12)
